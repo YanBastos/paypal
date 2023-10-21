@@ -8,7 +8,7 @@ paypal.configure(paypalConfig);
 const {products} = require("../config/products.json");
 
 // return initial page and send products
-router.get('/', (req, res) => res.render('index', { products }))
+router.get('/', (req, res) => res.render('index', { products }));
 
 // redirect to paypal router, when client buy item
 router.post('/buy', (req, res) => {
