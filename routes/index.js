@@ -13,17 +13,17 @@ router.get('/', (req, res) => res.render('index', { products }));
 // redirect to paypal router, when client buy item
 router.post('/buy', (req, res) => {
     // when the client click to buy
-    res.send({ success: true });
+    res.send('success');
 });
 
 router.get('/success', (req, res) => {
     // when the client pays successfully
-    res.send({ success: true });
+    res.render('success');
 })
 
 router.get('/cancel', (req, res) => {
     // when the client cancels the purchase
-    res.send({ cancel: true });
+    res.render('cancel');
 })
 
 module.exports = router;
